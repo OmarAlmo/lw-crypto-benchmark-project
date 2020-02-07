@@ -1,0 +1,9 @@
+**** Line 130 (old), 132 (new) ****
+**** Line 198 (old), 200 (new) ****
+**** Line 227 (old), 230 (new) ****
+
+  Description:
+    added a hold statement to delay primary inputs from clock edge
+
+  Change:
+    wait for hold;

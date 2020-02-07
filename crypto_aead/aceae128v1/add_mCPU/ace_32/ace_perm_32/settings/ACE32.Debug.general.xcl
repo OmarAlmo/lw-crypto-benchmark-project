@@ -1,0 +1,13 @@
+"D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\bin\armproc.dll" 
+
+"D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\bin\armsim2.dll" 
+
+"E:\Dropbox2018A\Dropbox\sLi\CCCCCC\Bit32C\ACE_32\ACE_perm_32\Debug\Exe\ACE32.out" 
+
+--plugin="D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\bin\armbat.dll" 
+
+--device_macro="D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\TexasInstruments\LM3S.dmac" 
+
+
+
+

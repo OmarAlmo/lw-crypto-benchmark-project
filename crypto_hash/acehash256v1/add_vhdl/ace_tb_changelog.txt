@@ -1,0 +1,106 @@
+**** Line 63 (old) / 63 (new) ****
+
+  Description:
+    Moved EDH to the list of generics
+
+  Change:
+    ; EDH    : std_logic_vector(0 to 2) := "111"  -- ENCRYPTION, DECRYPTION, HASH bits. example: 'xx0' = don't do HASH, 'xx1' = do HASH      
+
+
+
+**** Line 68 (old) / 69 (new) ****
+
+  Description:
+    Removed EDH signal declaration
+
+
+
+**** Line 91,96 (old) / 92,98 (new) ****
+
+  Description:
+    Added new signal declarations to delay primary inputs after clock edge
+
+  Change:
+    signal i_mode_buf    : mode_ty;
+    signal i_dom_sep_buf : domsep_ty;
+
+
+
+**** Line 114 (old) / 117 - 125 (new) ****
+
+  Description:
+    added new processes to delay a change in primary inputs after clock edge
+
+  Change:
+    i_dom_sep_proc : process(i_dom_sep_buf)
+    begin
+      i_dom_sep <= i_dom_sep_buf after hold;
+    end process;
+
+    i_mode_proc : process(i_mode_buf)
+    begin
+      i_mode <= i_mode_buf after hold;
+    end process;
+
+
+
+**** Line 199 (old) / 212 (new) ****
+**** Line 285 (old) / 304 (new) ****
+**** Line 370 (old) / 395 (new) ****
+**** Line 390 (old) / 416 (new) ****
+
+  Description:
+    changed signal name
+
+  Change:
+    was
+      i_mode
+    now
+      i_mode_buf
+
+
+
+**** Line 216 (old) / 229 (new) ****
+**** Line 226 (old) / 241 (new) ****
+**** Line 234 (old) / 250 (new) ****
+**** Line 239 (old) / 256 (new) ****
+**** Line 265 (old) / 284 (new) ****
+**** Line 303 (old) / 322 (new) ****
+**** Line 314 (old) / 335 (new) ****
+**** Line 324 (old) / 346 (new) ****
+**** Line 330 (old) / 353 (new) ****
+**** Line 358 (old) / 383 (new) ****
+**** Line 382 (old) / 406 (new) ****
+
+  Description:
+    changed signal name
+
+  Change:
+    was
+      i_dom_sep
+    now
+      i_dom_sep_buf
+
+
+
+**** Line 202 (old) / 215 (new) ****
+**** Line 287 (old) / 306 (new) ****
+**** Line 372 (old) / 396 (new) ****
+**** Line 387 (old) / 413 (new) ****
+
+  Description:
+    Hold statements are now in ace_unsynth.vhd
+
+  Change:
+    removed
+      wait for hold;
+
+
+
+**** Line 383 (old) / 407 (new) ****
+
+  Description
+    Added a report
+
+  Change:
+    report( "HASH DRIVE ALL" );

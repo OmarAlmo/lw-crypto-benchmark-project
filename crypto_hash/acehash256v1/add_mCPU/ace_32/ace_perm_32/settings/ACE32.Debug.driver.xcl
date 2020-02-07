@@ -1,0 +1,19 @@
+"--endian=little" 
+
+"--cpu=Cortex-M3" 
+
+"--fpu=None" 
+
+"-p" 
+
+"D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\CONFIG\debugger\TexasInstruments\LM3S9D96.ddf" 
+
+"--semihosting" 
+
+"--device=LM3S9D96" 
+
+"--multicore_nr_of_cores=1" 
+
+
+
+

@@ -1,0 +1,20 @@
+LIB_VHDL      =+ ace_pkg.vhd
+
+TB_ENTITY     =  ace_tb
+TB_ARCH       =  main
+
+TB_VHDL       =+ util_unsynth.vhd
+TB_VHDL       =+ ace_unsynth.vhd
+TB_VHDL       =+ ace_tb.vhd 
+
+SIM_SCRIPT    =  ace_tb.sim
+
+DESIGN_ARCH   =  rtl
+DESIGN_ENTITY =  ace
+
+DESIGN_VHDL   =+ sb_64.vhd
+DESIGN_VHDL   =+ lfsr_c.vhd
+DESIGN_VHDL   =+ ctl.vhd
+DESIGN_VHDL   =+ dp.vhd
+ENTITY_VHDL   =+ ace.vhd
+DESIGN_VHDL   =+ ace-rtl.vhd
