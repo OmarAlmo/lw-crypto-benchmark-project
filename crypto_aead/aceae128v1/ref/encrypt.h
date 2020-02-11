@@ -1,6 +1,8 @@
 #include "api.h"
 #include "crypto_aead.h"
 #include "executable_helper.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 #define KAT_SUCCESS 0
 #define KAT_FILE_OPEN_ERROR -1
@@ -10,6 +12,28 @@
 #define MAX_FILE_NAME 256
 #define MAX_MESSAGE_LENGTH 32
 #define MAX_ASSOCIATED_DATA_LENGTH 32
+
+int get_file_size(char *file_name) {
+
+  // opening the file in read mode
+  FILE *fp = fopen(file_name, "r");
+
+  // checking if the file exist or not
+  if (fp == NULL) {
+    printf("File Not Found!\n");
+    return -1;
+  }
+
+  fseek(fp, 0L, SEEK_END);
+
+  // calculating the size of the file
+  int res = ftell(fp);
+
+  // closing the file
+  fclose(fp);
+
+  return res;
+}
 
 int encrypt(char *file_name) {
   size_t length_of_file = get_file_size(file_name);
