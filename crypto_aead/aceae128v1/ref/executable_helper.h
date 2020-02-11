@@ -3,17 +3,6 @@
 
 #include <stdlib.h>
 
-size_t get_file_size(char *file_name) {
-  FILE *file = fopen(file_name, "r");
-  // get the numbers of lines in the file
-  fseek(file, 0, SEEK_END);
-
-  long f_size = ftell(file);
-  fseek(file, 0, SEEK_SET);
-  fclose(file);
-  return (size_t)f_size;
-}
-
 int readFile(char *fileName, char *out_msg) {
   FILE *file = fopen(fileName, "r");
   char *code;
