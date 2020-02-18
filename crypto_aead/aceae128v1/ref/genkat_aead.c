@@ -41,7 +41,6 @@
 
 #include "crypto_aead.h"
 #include "api.h"
-#include "encrypt.h"
 
 #define KAT_SUCCESS 0
 #define KAT_FILE_OPEN_ERROR -1
@@ -62,14 +61,7 @@ int encrypt_with_key(char *file_name, char *key_name);
 
 int main(int argc, char **argv)
 {
-	if (argc < 2)
-	{
-		printf("Please provided the file to encrypt");
-		return -1;
-	}
-
-	encrypt(argv[1]);
-
+	generate_test_vectors();
 	return 0;
 }
 
@@ -92,7 +84,7 @@ int generate_test_vectors()
 	init_buffer(msg, sizeof(msg));
 	init_buffer(ad, sizeof(ad));
 
-	sprintf(fileName, "../LWC_AEAD_KAT_%d_%d.txt", (CRYPTO_KEYBYTES * 8), (CRYPTO_NPUBBYTES * 8));
+	sprintf(fileName, "./LWC_AEAD_KAT_%d_%d.txt", (CRYPTO_KEYBYTES * 8), (CRYPTO_NPUBBYTES * 8));
 
 	if ((fp = fopen(fileName, "w")) == NULL)
 	{
@@ -100,59 +92,53 @@ int generate_test_vectors()
 		return KAT_FILE_OPEN_ERROR;
 	}
 
-	// for (unsigned long long mlen = 0; (mlen <= MAX_MESSAGE_LENGTH) && (ret_val == KAT_SUCCESS); mlen++)
-	// {
-
-	// 	for (unsigned long long adlen = 0; adlen <= MAX_ASSOCIATED_DATA_LENGTH; adlen++)
-	// 	{
-	unsigned long long mlen = MAX_MESSAGE_LENGTH;
-	unsigned long long adlen = MAX_ASSOCIATED_DATA_LENGTH;
-
-	fprintf(fp, "Count = %d\n", count++);
-
-	fprint_bstr(fp, "Key = ", key, CRYPTO_KEYBYTES);
-
-	fprint_bstr(fp, "Nonce = ", nonce, CRYPTO_NPUBBYTES);
-
-	fprint_bstr(fp, "PT = ", msg, mlen);
-
-	fprint_bstr(fp, "AD = ", ad, adlen);
-
-	printf("msg: %s\n", msg);
-
-	if ((func_ret = crypto_aead_encrypt(ct, &clen, msg, mlen, ad, adlen, NULL, nonce, key)) != 0)
+	for (unsigned long long mlen = 0; (mlen <= MAX_MESSAGE_LENGTH) && (ret_val == KAT_SUCCESS); mlen++)
 	{
-		fprintf(fp, "crypto_aead_encrypt returned <%d>\n", func_ret);
-		ret_val = KAT_CRYPTO_FAILURE;
-		// break;
+
+		for (unsigned long long adlen = 0; adlen <= MAX_ASSOCIATED_DATA_LENGTH; adlen++)
+		{
+			unsigned long long mlen = MAX_MESSAGE_LENGTH;
+			unsigned long long adlen = MAX_ASSOCIATED_DATA_LENGTH;
+
+			fprintf(fp, "Count = %d\n", count++);
+
+			fprint_bstr(fp, "Key = ", key, CRYPTO_KEYBYTES);
+
+			fprint_bstr(fp, "Nonce = ", nonce, CRYPTO_NPUBBYTES);
+
+			fprint_bstr(fp, "PT = ", msg, mlen);
+
+			fprint_bstr(fp, "AD = ", ad, adlen);
+
+			if ((func_ret = crypto_aead_encrypt(ct, &clen, msg, mlen, ad, adlen, NULL, nonce, key)) != 0)
+			{
+				fprintf(fp, "crypto_aead_encrypt returned <%d>\n", func_ret);
+				ret_val = KAT_CRYPTO_FAILURE;
+			}
+
+			fprint_bstr(fp, "CT = ", ct, clen);
+
+			fprintf(fp, "\n");
+
+			if ((func_ret = crypto_aead_decrypt(msg2, &mlen2, NULL, ct, clen, ad, adlen, nonce, key)) != 0)
+			{
+				fprintf(fp, "crypto_aead_decrypt returned <%d>\n", func_ret);
+				ret_val = KAT_CRYPTO_FAILURE;
+			}
+
+			if (mlen != mlen2)
+			{
+				fprintf(fp, "crypto_aead_decrypt returned bad 'mlen': Got <%llu>, expected <%llu>\n", mlen2, mlen);
+				ret_val = KAT_CRYPTO_FAILURE;
+			}
+
+			if (memcmp(msg, msg2, mlen))
+			{
+				fprintf(fp, "crypto_aead_decrypt did not recover the plaintext\n");
+				ret_val = KAT_CRYPTO_FAILURE;
+			}
+		}
 	}
-
-	fprint_bstr(fp, "CT = ", ct, clen);
-
-	fprintf(fp, "\n");
-
-	if ((func_ret = crypto_aead_decrypt(msg2, &mlen2, NULL, ct, clen, ad, adlen, nonce, key)) != 0)
-	{
-		fprintf(fp, "crypto_aead_decrypt returned <%d>\n", func_ret);
-		ret_val = KAT_CRYPTO_FAILURE;
-		// break;
-	}
-
-	if (mlen != mlen2)
-	{
-		fprintf(fp, "crypto_aead_decrypt returned bad 'mlen': Got <%llu>, expected <%llu>\n", mlen2, mlen);
-		ret_val = KAT_CRYPTO_FAILURE;
-		// break;
-	}
-
-	if (memcmp(msg, msg2, mlen))
-	{
-		fprintf(fp, "crypto_aead_decrypt did not recover the plaintext\n");
-		ret_val = KAT_CRYPTO_FAILURE;
-		// break;
-	}
-	// 	}
-	// }
 
 	fclose(fp);
 
