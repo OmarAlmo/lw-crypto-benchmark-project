@@ -16,14 +16,16 @@
 #define MAX_MESSAGE_LENGTH 32
 #define MAX_ASSOCIATED_DATA_LENGTH 32
 
-int get_file_size(char *file_name) {
+int get_file_size(char *file_name)
+{
 
   // opening the file in read mode
   FILE *fp = fopen(file_name, "r");
 
   // checking if the file exist or not
-  if (fp == NULL) {
-    printf("File Not Found!\n");
+  if (fp == NULL)
+  {
+    printf("%s File Not Found!\n", file_name);
     return -1;
   }
 
@@ -41,18 +43,22 @@ int get_file_size(char *file_name) {
 /**
  * check the given argument is a file or not
  * */
-int arg_file_checker(char *file_name) {
+int arg_file_checker(char *file_name)
+{
   FILE *fp = fopen(file_name, "r");
-  if (fp == NULL) {
+  if (fp == NULL)
+  {
     return 0;
   }
   fclose(fp);
   return 1;
 }
 
-int show_status(double percent) {
+int show_status(double percent)
+{
   int x;
-  for (x = 0; x < percent; x++) {
+  for (x = 0; x < percent; x++)
+  {
     printf("|");
   }
   printf("%.2f%%\r", percent);
@@ -66,16 +72,20 @@ int show_status(double percent) {
  * Parse the argument content if it is a file
  * */
 
-int parse_arg(char *argv, char *dest) {
-  if (arg_file_checker(argv) == 1) {
+int parse_arg(char *argv, char *dest)
+{
+  if (arg_file_checker(argv) == 1)
+  {
     size_t length_of_file = get_file_size(argv);
-    if (length_of_file > strlen(dest) - 1) {
+    if (length_of_file > strlen(dest) - 1)
+    {
       printf("%s is too big \n", argv);
       return -1;
     }
     return readFile(argv, dest);
-
-  } else {
+  }
+  else
+  {
     memset(dest, "\0", sizeof(dest));
     strcpy(dest, argv);
   }
@@ -84,7 +94,8 @@ int parse_arg(char *argv, char *dest) {
 
 int benchmark_one_file(char *file_name, unsigned char *key,
                        unsigned char *nonce, unsigned char *ad,
-                       FILE *run_time_fp, int debug) {
+                       FILE *run_time_fp, int debug)
+{
   size_t length_of_file = get_file_size(file_name);
 
   char *plain_text = malloc(length_of_file + 1);
@@ -113,16 +124,17 @@ int benchmark_one_file(char *file_name, unsigned char *key,
   // defining the output file name in format name.enc and name.dec
   char copy_file_name[strlen(file_name) + 5];
   strcpy(copy_file_name, file_name);
-  FILE *enc_output_fp = fopen(strcat(copy_file_name, ".enc"), "w+");
+  FILE *enc_output_fp = fopen(strcat(copy_file_name, ".enc"), "wr");
 
   strcpy(copy_file_name, file_name);
-  FILE *dec_output_fp = fopen(strcat(copy_file_name, ".dec"), "w+");
+  FILE *dec_output_fp = fopen(strcat(copy_file_name, ".dec"), "wr");
 
   double total_d_time;
   clock_t total_time = clock();
   // batch the huge file into blocks to perform ace
   for (begin_index = 0; begin_index < length_of_file;
-       begin_index += MAX_MESSAGE_LENGTH) {
+       begin_index += MAX_MESSAGE_LENGTH)
+  {
     int end_index = (begin_index + MAX_MESSAGE_LENGTH);
     end_index = end_index > length_of_file ? length_of_file : end_index;
 
@@ -136,7 +148,8 @@ int benchmark_one_file(char *file_name, unsigned char *key,
     t = clock() - t;
     encryption_time += ((double)t) / CLOCKS_PER_SEC; // in seconds
 
-    if (func_ret == KAT_SUCCESS) {
+    if (func_ret == KAT_SUCCESS)
+    {
       fprintf(enc_output_fp, "%02x", ct);
     }
 
@@ -147,18 +160,22 @@ int benchmark_one_file(char *file_name, unsigned char *key,
     t = clock() - t;
     decryption_time += ((double)t) / CLOCKS_PER_SEC; // in seconds a
 
-    if (func_ret == KAT_SUCCESS) {
+    if (func_ret == KAT_SUCCESS)
+    {
       fprintf(dec_output_fp, "%s", msg2);
     }
 
-    if (mlen != mlen2) {
+    if (mlen != mlen2)
+    {
       ret_val = KAT_CRYPTO_FAILURE;
     }
 
-    if (memcmp(msg, msg2, mlen)) {
+    if (memcmp(msg, msg2, mlen))
+    {
       ret_val = KAT_CRYPTO_FAILURE;
     }
-    if (debug) {
+    if (debug)
+    {
       printf("============================================\n");
       printf("Encryptingmsg starting from %d ends to %d\n", begin_index,
              end_index);
@@ -175,7 +192,8 @@ int benchmark_one_file(char *file_name, unsigned char *key,
 
     printf("[");
     percent_completion = ((double)begin_index / length_of_file) * 100;
-    for (int x = 0; x < (int)percent_completion; x++) {
+    for (int x = 0; x < (int)percent_completion; x++)
+    {
       printf("|");
     }
     printf("%.2f%%]\r", percent_completion);

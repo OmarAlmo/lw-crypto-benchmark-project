@@ -45,8 +45,8 @@ int main(int argc, char **argv)
     unsigned char nonce[CRYPTO_NPUBBYTES] = "some_nonce";
     unsigned char ad[MAX_ASSOCIATED_DATA_LENGTH] = "some_ad";
     int debug = strcmp(argv[argc - 1], "debug") == 0 ? 1 : 0;
-
-    FILE *benchmark_fp = fopen("run_time_bench_mark.csv", "w+");
+    int previous = get_file_size("run_time_bench_mark.csv");
+    FILE *benchmark_fp = fopen("run_time_bench_mark.csv", previous == -1 ? "wr" : "a");
 
     switch (argc)
     {
@@ -72,7 +72,11 @@ int main(int argc, char **argv)
         }
         break;
     }
-    fprintf(benchmark_fp, "file_name,file_sizes,encryption_time(s),decryption_time(s),total_time(s)\n");
+
+    if (previous == -1)
+    {
+        fprintf(benchmark_fp, "file_name,file_sizes,encryption_time(s),decryption_time(s),total_time(s)\n");
+    }
     int result = benchmark_one_file(argv[1], key, nonce, ad, benchmark_fp, debug);
 
     fclose(benchmark_fp);
