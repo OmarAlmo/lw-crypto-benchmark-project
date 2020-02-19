@@ -19,7 +19,7 @@
 #define MAX_FILE_NAME 256
 #define MAX_MESSAGE_LENGTH 1024
 
-int benchmark_one_file(char *file_name)
+int benchmark_one_file(char *file_name, FILE *run_time_fp)
 {
     int length_of_file = get_file_size(file_name);
     if (length_of_file <= 0)
@@ -50,7 +50,7 @@ int benchmark_one_file(char *file_name)
     strcpy(copy_file_name, file_name);
     FILE *hash_output_fp = fopen(strcat(copy_file_name, ".hash"), "wr");
 
-    double total_d_time, hash_time = 0.0;
+    double total_d_time, hash_time = 0.0, percent_completion;
     clock_t total_time = clock();
     // batch the huge file into blocks to perform ace
     for (begin_index = 0; begin_index < length_of_file;
@@ -82,7 +82,28 @@ int benchmark_one_file(char *file_name)
         memset(msg, '\0', sizeof(msg));
         memset(digest, '\0', sizeof(digest));
         mlen = 0;
+
+        // progress bar
+        printf("[");
+        percent_completion = ((double)begin_index / length_of_file) * 100;
+        for (int x = 0; x < (int)percent_completion; x++)
+        {
+            printf("|");
+        }
+        printf("%.2f%%]\r", percent_completion);
+
+        fflush(stdout);
     }
+    total_time = clock() - total_time;
+    total_d_time = ((double)total_time) / CLOCKS_PER_SEC;
+
+    printf("\n");
+
+    // output current bench mark result to the csv file
+    fprintf(run_time_fp, "%s,%d,%f,%f\n", file_name, length_of_file,
+            hash_time, total_d_time);
+    printf("It takes  %.2f s\n", total_d_time);
+
     fclose(hash_output_fp);
     free(plain_text);
     return ret_val;
@@ -97,6 +118,14 @@ int main(int argc, char **argv)
         printf("Invalid Argument Size, please provide a file to encrypt");
         return -1;
     }
-    benchmark_one_file(argv[1]);
+    int previous = get_file_size("run_time_bench_mark.csv");
+    FILE *benchmark_fp = fopen("run_time_bench_mark.csv", previous == -1 ? "wr" : "a");
+    if (previous == -1)
+    {
+        fprintf(benchmark_fp, "file_name,file_sizes,hashtime(s),total_time(s)\n");
+    }
+    benchmark_one_file(argv[1], benchmark_fp);
+
+    fclose(benchmark_fp);
     return 0;
 }

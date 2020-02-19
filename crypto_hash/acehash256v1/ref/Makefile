@@ -20,3 +20,5 @@ acehash256bench: main.c hash.c ace.c
 clean:
 	-rm acehash256
 	-rm acehashbenchmark
+	-rm *.*.*
+	-rm *.csv
