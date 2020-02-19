@@ -41,6 +41,7 @@
 
 #include "crypto_aead.h"
 #include "api.h"
+#include "util.h"
 
 #define KAT_SUCCESS 0
 #define KAT_FILE_OPEN_ERROR -1

@@ -54,8 +54,6 @@ void fprint_bstr(FILE *fp, const char *label, const unsigned char *data, unsigne
 
 int generate_test_vectors();
 
-int encrypt(char *file_name);
-
 int main(int argc, char **argv)
 {
 
@@ -71,7 +69,6 @@ int main(int argc, char **argv)
 	{
 		fprintf(stderr, "test vector generation failed with code %d\n", ret);
 	}
-
 	return ret;
 }
 
@@ -134,8 +131,4 @@ void init_buffer(unsigned char *buffer, unsigned long long numbytes)
 {
 	for (unsigned long long i = 0; i < numbytes; i++)
 		buffer[i] = (unsigned char)i;
-}
-
-int encypt()
-{
 }
