@@ -10,14 +10,14 @@
 
 #include "util.h"
 
-#define KAT_SUCCESS 0
-#define KAT_FILE_OPEN_ERROR -1
-#define KAT_DATA_ERROR -3
-#define KAT_CRYPTO_FAILURE -4
+// #define KAT_SUCCESS 0
+// #define KAT_FILE_OPEN_ERROR -1
+// #define KAT_DATA_ERROR -3
+// #define KAT_CRYPTO_FAILURE -4
 
-#define MAX_FILE_NAME 256
-#define MAX_MESSAGE_LENGTH 32
-#define MAX_ASSOCIATED_DATA_LENGTH 32
+// #define MAX_FILE_NAME 256
+// #define MAX_MESSAGE_LENGTH 32
+// #define MAX_ASSOCIATED_DATA_LENGTH 32
 
 #define CRYPTO_KEYBYTES 16
 
