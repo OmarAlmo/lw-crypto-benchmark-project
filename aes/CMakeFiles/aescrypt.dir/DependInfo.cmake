@@ -16,7 +16,7 @@ set(CMAKE_C_COMPILER_ID "Clang")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_C
-  "PACKAGE_DATE=\"2020-03-10T01:44:29Z\""
+  "PACKAGE_DATE=\"2020-03-10T17:54:03Z\""
   "PACKAGE_NAME=\"aescrypt\""
   "PACKAGE_VERSION=\"1.0.0\""
   )

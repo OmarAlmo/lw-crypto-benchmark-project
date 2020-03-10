@@ -28,31 +28,34 @@ The CXX compiler identification is AppleClang, found in "/Users/omaralmo/Desktop
 Determining if the C compiler works passed with the following output:
 Change Dir: /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/local/bin/gmake cmTC_6cd18/fast 
-/usr/local/bin/gmake -f CMakeFiles/cmTC_6cd18.dir/build.make CMakeFiles/cmTC_6cd18.dir/build
+Run Build Command(s):/usr/local/bin/gmake cmTC_fdef9/fast 
 gmake[1]: Entering directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_6cd18.dir/testCCompiler.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/cmTC_6cd18.dir/testCCompiler.c.o   -c /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_6cd18
-/usr/local/Cellar/cmake/3.14.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6cd18.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_6cd18.dir/testCCompiler.c.o  -o cmTC_6cd18 
+/usr/local/bin/gmake -f CMakeFiles/cmTC_fdef9.dir/build.make CMakeFiles/cmTC_fdef9.dir/build
+gmake[2]: Entering directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fdef9.dir/testCCompiler.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/cmTC_fdef9.dir/testCCompiler.c.o   -c /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_fdef9
+/usr/local/Cellar/cmake/3.14.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fdef9.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_fdef9.dir/testCCompiler.c.o  -o cmTC_fdef9 
+gmake[2]: Leaving directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
 gmake[1]: Leaving directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/local/bin/gmake cmTC_07c8a/fast 
-/usr/local/bin/gmake -f CMakeFiles/cmTC_07c8a.dir/build.make CMakeFiles/cmTC_07c8a.dir/build
+Run Build Command(s):/usr/local/bin/gmake cmTC_68f6c/fast 
 gmake[1]: Entering directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_07c8a.dir/CMakeCCompilerABI.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -v -Wl,-v -o CMakeFiles/cmTC_07c8a.dir/CMakeCCompilerABI.c.o   -c /usr/local/Cellar/cmake/3.14.2/share/cmake/Modules/CMakeCCompilerABI.c
+/usr/local/bin/gmake -f CMakeFiles/cmTC_68f6c.dir/build.make CMakeFiles/cmTC_68f6c.dir/build
+gmake[2]: Entering directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_68f6c.dir/CMakeCCompilerABI.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -v -Wl,-v -o CMakeFiles/cmTC_68f6c.dir/CMakeCCompilerABI.c.o   -c /usr/local/Cellar/cmake/3.14.2/share/cmake/Modules/CMakeCCompilerABI.c
 Apple LLVM version 10.0.1 (clang-1001.0.46.4)
 Target: x86_64-apple-darwin18.7.0
 Thread model: posix
 InstalledDir: /Library/Developer/CommandLineTools/usr/bin
 clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
- "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple x86_64-apple-macosx10.14.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fno-strict-return -masm-verbose -munwind-tables -target-sdk-version=10.14 -target-cpu penryn -dwarf-column-info -debugger-tuning=lldb -target-linker-version 450.3 -v -coverage-notes-file /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_07c8a.dir/CMakeCCompilerABI.c.gcno -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/10.0.1 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wno-atomic-implicit-seq-cst -Wno-framework-include-private-from-public -Wno-atimport-in-framework-header -Wno-quoted-include-in-framework-header -fdebug-compilation-dir /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fobjc-runtime=macosx-10.14.0 -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_07c8a.dir/CMakeCCompilerABI.c.o -x c /usr/local/Cellar/cmake/3.14.2/share/cmake/Modules/CMakeCCompilerABI.c
+ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple x86_64-apple-macosx10.14.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fno-strict-return -masm-verbose -munwind-tables -target-sdk-version=10.14 -target-cpu penryn -dwarf-column-info -debugger-tuning=lldb -target-linker-version 450.3 -v -coverage-notes-file /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_68f6c.dir/CMakeCCompilerABI.c.gcno -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/10.0.1 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wno-atomic-implicit-seq-cst -Wno-framework-include-private-from-public -Wno-atimport-in-framework-header -Wno-quoted-include-in-framework-header -fdebug-compilation-dir /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fobjc-runtime=macosx-10.14.0 -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_68f6c.dir/CMakeCCompilerABI.c.o -x c /usr/local/Cellar/cmake/3.14.2/share/cmake/Modules/CMakeCCompilerABI.c
 clang -cc1 version 10.0.1 (clang-1001.0.46.4) default target x86_64-apple-darwin18.7.0
 ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/local/include"
 ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/Library/Frameworks"
@@ -63,14 +66,14 @@ ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX1
  /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include
  /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks (framework directory)
 End of search list.
-Linking C executable cmTC_07c8a
-/usr/local/Cellar/cmake/3.14.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_07c8a.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_07c8a.dir/CMakeCCompilerABI.c.o  -o cmTC_07c8a 
+Linking C executable cmTC_68f6c
+/usr/local/Cellar/cmake/3.14.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_68f6c.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_68f6c.dir/CMakeCCompilerABI.c.o  -o cmTC_68f6c 
 Apple LLVM version 10.0.1 (clang-1001.0.46.4)
 Target: x86_64-apple-darwin18.7.0
 Thread model: posix
 InstalledDir: /Library/Developer/CommandLineTools/usr/bin
- "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.14.0 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -o cmTC_07c8a -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_07c8a.dir/CMakeCCompilerABI.c.o -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/lib/darwin/libclang_rt.osx.a
+ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.14.0 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -o cmTC_68f6c -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_68f6c.dir/CMakeCCompilerABI.c.o -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/lib/darwin/libclang_rt.osx.a
 @(#)PROGRAM:ld  PROJECT:ld64-450.3
 BUILD 18:16:53 Apr  5 2019
 configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
@@ -78,6 +81,7 @@ Library search paths:
 	/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/lib
 Framework search paths:
 	/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/
+gmake[2]: Leaving directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
 gmake[1]: Leaving directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
 
 
@@ -98,17 +102,18 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/local/bin/gmake cmTC_07c8a/fast ]
-  ignore line: [/usr/local/bin/gmake -f CMakeFiles/cmTC_07c8a.dir/build.make CMakeFiles/cmTC_07c8a.dir/build]
+  ignore line: [Run Build Command(s):/usr/local/bin/gmake cmTC_68f6c/fast ]
   ignore line: [gmake[1]: Entering directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_07c8a.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -v -Wl,-v -o CMakeFiles/cmTC_07c8a.dir/CMakeCCompilerABI.c.o   -c /usr/local/Cellar/cmake/3.14.2/share/cmake/Modules/CMakeCCompilerABI.c]
+  ignore line: [/usr/local/bin/gmake -f CMakeFiles/cmTC_68f6c.dir/build.make CMakeFiles/cmTC_68f6c.dir/build]
+  ignore line: [gmake[2]: Entering directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_68f6c.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -v -Wl,-v -o CMakeFiles/cmTC_68f6c.dir/CMakeCCompilerABI.c.o   -c /usr/local/Cellar/cmake/3.14.2/share/cmake/Modules/CMakeCCompilerABI.c]
   ignore line: [Apple LLVM version 10.0.1 (clang-1001.0.46.4)]
   ignore line: [Target: x86_64-apple-darwin18.7.0]
   ignore line: [Thread model: posix]
   ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
   ignore line: [clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]]
-  ignore line: [ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple x86_64-apple-macosx10.14.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fno-strict-return -masm-verbose -munwind-tables -target-sdk-version=10.14 -target-cpu penryn -dwarf-column-info -debugger-tuning=lldb -target-linker-version 450.3 -v -coverage-notes-file /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_07c8a.dir/CMakeCCompilerABI.c.gcno -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/10.0.1 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wno-atomic-implicit-seq-cst -Wno-framework-include-private-from-public -Wno-atimport-in-framework-header -Wno-quoted-include-in-framework-header -fdebug-compilation-dir /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fobjc-runtime=macosx-10.14.0 -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_07c8a.dir/CMakeCCompilerABI.c.o -x c /usr/local/Cellar/cmake/3.14.2/share/cmake/Modules/CMakeCCompilerABI.c]
+  ignore line: [ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple x86_64-apple-macosx10.14.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fno-strict-return -masm-verbose -munwind-tables -target-sdk-version=10.14 -target-cpu penryn -dwarf-column-info -debugger-tuning=lldb -target-linker-version 450.3 -v -coverage-notes-file /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_68f6c.dir/CMakeCCompilerABI.c.gcno -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/10.0.1 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wno-atomic-implicit-seq-cst -Wno-framework-include-private-from-public -Wno-atimport-in-framework-header -Wno-quoted-include-in-framework-header -fdebug-compilation-dir /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fobjc-runtime=macosx-10.14.0 -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_68f6c.dir/CMakeCCompilerABI.c.o -x c /usr/local/Cellar/cmake/3.14.2/share/cmake/Modules/CMakeCCompilerABI.c]
   ignore line: [clang -cc1 version 10.0.1 (clang-1001.0.46.4) default target x86_64-apple-darwin18.7.0]
   ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/local/include"]
   ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/Library/Frameworks"]
@@ -119,14 +124,14 @@ Parsed C implicit link information from above output:
   ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include]
   ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks (framework directory)]
   ignore line: [End of search list.]
-  ignore line: [Linking C executable cmTC_07c8a]
-  ignore line: [/usr/local/Cellar/cmake/3.14.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_07c8a.dir/link.txt --verbose=1]
-  ignore line: [/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_07c8a.dir/CMakeCCompilerABI.c.o  -o cmTC_07c8a ]
+  ignore line: [Linking C executable cmTC_68f6c]
+  ignore line: [/usr/local/Cellar/cmake/3.14.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_68f6c.dir/link.txt --verbose=1]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_68f6c.dir/CMakeCCompilerABI.c.o  -o cmTC_68f6c ]
   ignore line: [Apple LLVM version 10.0.1 (clang-1001.0.46.4)]
   ignore line: [Target: x86_64-apple-darwin18.7.0]
   ignore line: [Thread model: posix]
   ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
-  link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.14.0 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -o cmTC_07c8a -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_07c8a.dir/CMakeCCompilerABI.c.o -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/lib/darwin/libclang_rt.osx.a]
+  link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.14.0 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -o cmTC_68f6c -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_68f6c.dir/CMakeCCompilerABI.c.o -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/lib/darwin/libclang_rt.osx.a]
     arg [/Library/Developer/CommandLineTools/usr/bin/ld] ==> ignore
     arg [-demangle] ==> ignore
     arg [-lto_library] ==> ignore, skip following value
@@ -139,11 +144,11 @@ Parsed C implicit link information from above output:
     arg [-syslibroot] ==> ignore
     arg [/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_07c8a] ==> ignore
+    arg [cmTC_68f6c] ==> ignore
     arg [-search_paths_first] ==> ignore
     arg [-headerpad_max_install_names] ==> ignore
     arg [-v] ==> ignore
-    arg [CMakeFiles/cmTC_07c8a.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_68f6c.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lSystem] ==> lib [System]
     arg [/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/lib/darwin/libclang_rt.osx.a] ==> lib [/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/lib/darwin/libclang_rt.osx.a]
   Library search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/lib]
@@ -162,14 +167,16 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/local/bin/gmake cmTC_2e1dc/fast 
-/usr/local/bin/gmake -f CMakeFiles/cmTC_2e1dc.dir/build.make CMakeFiles/cmTC_2e1dc.dir/build
+Run Build Command(s):/usr/local/bin/gmake cmTC_a27ac/fast 
 gmake[1]: Entering directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_2e1dc.dir/feature_tests.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=c11 -o CMakeFiles/cmTC_2e1dc.dir/feature_tests.c.o   -c /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/feature_tests.c
-Linking C executable cmTC_2e1dc
-/usr/local/Cellar/cmake/3.14.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2e1dc.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_2e1dc.dir/feature_tests.c.o  -o cmTC_2e1dc 
+/usr/local/bin/gmake -f CMakeFiles/cmTC_a27ac.dir/build.make CMakeFiles/cmTC_a27ac.dir/build
+gmake[2]: Entering directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a27ac.dir/feature_tests.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=c11 -o CMakeFiles/cmTC_a27ac.dir/feature_tests.c.o   -c /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/feature_tests.c
+Linking C executable cmTC_a27ac
+/usr/local/Cellar/cmake/3.14.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a27ac.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_a27ac.dir/feature_tests.c.o  -o cmTC_a27ac 
+gmake[2]: Leaving directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
 gmake[1]: Leaving directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
 
 
@@ -182,14 +189,16 @@ gmake[1]: Leaving directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-b
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/local/bin/gmake cmTC_4f02e/fast 
-/usr/local/bin/gmake -f CMakeFiles/cmTC_4f02e.dir/build.make CMakeFiles/cmTC_4f02e.dir/build
+Run Build Command(s):/usr/local/bin/gmake cmTC_513e7/fast 
 gmake[1]: Entering directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_4f02e.dir/feature_tests.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=c99 -o CMakeFiles/cmTC_4f02e.dir/feature_tests.c.o   -c /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/feature_tests.c
-Linking C executable cmTC_4f02e
-/usr/local/Cellar/cmake/3.14.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4f02e.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_4f02e.dir/feature_tests.c.o  -o cmTC_4f02e 
+/usr/local/bin/gmake -f CMakeFiles/cmTC_513e7.dir/build.make CMakeFiles/cmTC_513e7.dir/build
+gmake[2]: Entering directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_513e7.dir/feature_tests.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=c99 -o CMakeFiles/cmTC_513e7.dir/feature_tests.c.o   -c /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/feature_tests.c
+Linking C executable cmTC_513e7
+/usr/local/Cellar/cmake/3.14.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_513e7.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_513e7.dir/feature_tests.c.o  -o cmTC_513e7 
+gmake[2]: Leaving directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
 gmake[1]: Leaving directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
 
 
@@ -202,14 +211,16 @@ gmake[1]: Leaving directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-b
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/local/bin/gmake cmTC_4816e/fast 
-/usr/local/bin/gmake -f CMakeFiles/cmTC_4816e.dir/build.make CMakeFiles/cmTC_4816e.dir/build
+Run Build Command(s):/usr/local/bin/gmake cmTC_db682/fast 
 gmake[1]: Entering directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_4816e.dir/feature_tests.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=c90 -o CMakeFiles/cmTC_4816e.dir/feature_tests.c.o   -c /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/feature_tests.c
-Linking C executable cmTC_4816e
-/usr/local/Cellar/cmake/3.14.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4816e.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_4816e.dir/feature_tests.c.o  -o cmTC_4816e 
+/usr/local/bin/gmake -f CMakeFiles/cmTC_db682.dir/build.make CMakeFiles/cmTC_db682.dir/build
+gmake[2]: Entering directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_db682.dir/feature_tests.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=c90 -o CMakeFiles/cmTC_db682.dir/feature_tests.c.o   -c /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/feature_tests.c
+Linking C executable cmTC_db682
+/usr/local/Cellar/cmake/3.14.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_db682.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_db682.dir/feature_tests.c.o  -o cmTC_db682 
+gmake[2]: Leaving directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
 gmake[1]: Leaving directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
 
 
@@ -220,31 +231,34 @@ gmake[1]: Leaving directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-b
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/local/bin/gmake cmTC_bd75f/fast 
-/usr/local/bin/gmake -f CMakeFiles/cmTC_bd75f.dir/build.make CMakeFiles/cmTC_bd75f.dir/build
+Run Build Command(s):/usr/local/bin/gmake cmTC_64949/fast 
 gmake[1]: Entering directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_bd75f.dir/testCXXCompiler.cxx.o
-/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/cmTC_bd75f.dir/testCXXCompiler.cxx.o -c /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_bd75f
-/usr/local/Cellar/cmake/3.14.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bd75f.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_bd75f.dir/testCXXCompiler.cxx.o  -o cmTC_bd75f 
+/usr/local/bin/gmake -f CMakeFiles/cmTC_64949.dir/build.make CMakeFiles/cmTC_64949.dir/build
+gmake[2]: Entering directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_64949.dir/testCXXCompiler.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/cmTC_64949.dir/testCXXCompiler.cxx.o -c /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_64949
+/usr/local/Cellar/cmake/3.14.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_64949.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_64949.dir/testCXXCompiler.cxx.o  -o cmTC_64949 
+gmake[2]: Leaving directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
 gmake[1]: Leaving directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/local/bin/gmake cmTC_8ed8d/fast 
-/usr/local/bin/gmake -f CMakeFiles/cmTC_8ed8d.dir/build.make CMakeFiles/cmTC_8ed8d.dir/build
+Run Build Command(s):/usr/local/bin/gmake cmTC_147ef/fast 
 gmake[1]: Entering directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_8ed8d.dir/CMakeCXXCompilerABI.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -v -Wl,-v -o CMakeFiles/cmTC_8ed8d.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/Cellar/cmake/3.14.2/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+/usr/local/bin/gmake -f CMakeFiles/cmTC_147ef.dir/build.make CMakeFiles/cmTC_147ef.dir/build
+gmake[2]: Entering directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_147ef.dir/CMakeCXXCompilerABI.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -v -Wl,-v -o CMakeFiles/cmTC_147ef.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/Cellar/cmake/3.14.2/share/cmake/Modules/CMakeCXXCompilerABI.cpp
 Apple LLVM version 10.0.1 (clang-1001.0.46.4)
 Target: x86_64-apple-darwin18.7.0
 Thread model: posix
 InstalledDir: /Library/Developer/CommandLineTools/usr/bin
 clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
- "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple x86_64-apple-macosx10.14.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fno-strict-return -masm-verbose -munwind-tables -target-sdk-version=10.14 -target-cpu penryn -dwarf-column-info -debugger-tuning=lldb -target-linker-version 450.3 -v -coverage-notes-file /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_8ed8d.dir/CMakeCXXCompilerABI.cpp.gcno -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/10.0.1 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -stdlib=libc++ -Wno-atomic-implicit-seq-cst -Wno-framework-include-private-from-public -Wno-atimport-in-framework-header -Wno-quoted-include-in-framework-header -fdeprecated-macro -fdebug-compilation-dir /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fobjc-runtime=macosx-10.14.0 -fcxx-exceptions -fexceptions -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_8ed8d.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/local/Cellar/cmake/3.14.2/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple x86_64-apple-macosx10.14.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fno-strict-return -masm-verbose -munwind-tables -target-sdk-version=10.14 -target-cpu penryn -dwarf-column-info -debugger-tuning=lldb -target-linker-version 450.3 -v -coverage-notes-file /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_147ef.dir/CMakeCXXCompilerABI.cpp.gcno -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/10.0.1 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -stdlib=libc++ -Wno-atomic-implicit-seq-cst -Wno-framework-include-private-from-public -Wno-atimport-in-framework-header -Wno-quoted-include-in-framework-header -fdeprecated-macro -fdebug-compilation-dir /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fobjc-runtime=macosx-10.14.0 -fcxx-exceptions -fexceptions -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_147ef.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/local/Cellar/cmake/3.14.2/share/cmake/Modules/CMakeCXXCompilerABI.cpp
 clang -cc1 version 10.0.1 (clang-1001.0.46.4) default target x86_64-apple-darwin18.7.0
 ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/c++/v1"
 ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/local/include"
@@ -257,14 +271,14 @@ ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX1
  /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include
  /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks (framework directory)
 End of search list.
-Linking CXX executable cmTC_8ed8d
-/usr/local/Cellar/cmake/3.14.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8ed8d.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_8ed8d.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_8ed8d 
+Linking CXX executable cmTC_147ef
+/usr/local/Cellar/cmake/3.14.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_147ef.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_147ef.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_147ef 
 Apple LLVM version 10.0.1 (clang-1001.0.46.4)
 Target: x86_64-apple-darwin18.7.0
 Thread model: posix
 InstalledDir: /Library/Developer/CommandLineTools/usr/bin
- "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.14.0 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -o cmTC_8ed8d -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_8ed8d.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/lib/darwin/libclang_rt.osx.a
+ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.14.0 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -o cmTC_147ef -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_147ef.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/lib/darwin/libclang_rt.osx.a
 @(#)PROGRAM:ld  PROJECT:ld64-450.3
 BUILD 18:16:53 Apr  5 2019
 configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
@@ -272,6 +286,7 @@ Library search paths:
 	/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/lib
 Framework search paths:
 	/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/
+gmake[2]: Leaving directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
 gmake[1]: Leaving directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
 
 
@@ -294,17 +309,18 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/local/bin/gmake cmTC_8ed8d/fast ]
-  ignore line: [/usr/local/bin/gmake -f CMakeFiles/cmTC_8ed8d.dir/build.make CMakeFiles/cmTC_8ed8d.dir/build]
+  ignore line: [Run Build Command(s):/usr/local/bin/gmake cmTC_147ef/fast ]
   ignore line: [gmake[1]: Entering directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_8ed8d.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -v -Wl,-v -o CMakeFiles/cmTC_8ed8d.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/Cellar/cmake/3.14.2/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [/usr/local/bin/gmake -f CMakeFiles/cmTC_147ef.dir/build.make CMakeFiles/cmTC_147ef.dir/build]
+  ignore line: [gmake[2]: Entering directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_147ef.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -v -Wl,-v -o CMakeFiles/cmTC_147ef.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/Cellar/cmake/3.14.2/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
   ignore line: [Apple LLVM version 10.0.1 (clang-1001.0.46.4)]
   ignore line: [Target: x86_64-apple-darwin18.7.0]
   ignore line: [Thread model: posix]
   ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
   ignore line: [clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]]
-  ignore line: [ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple x86_64-apple-macosx10.14.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fno-strict-return -masm-verbose -munwind-tables -target-sdk-version=10.14 -target-cpu penryn -dwarf-column-info -debugger-tuning=lldb -target-linker-version 450.3 -v -coverage-notes-file /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_8ed8d.dir/CMakeCXXCompilerABI.cpp.gcno -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/10.0.1 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -stdlib=libc++ -Wno-atomic-implicit-seq-cst -Wno-framework-include-private-from-public -Wno-atimport-in-framework-header -Wno-quoted-include-in-framework-header -fdeprecated-macro -fdebug-compilation-dir /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fobjc-runtime=macosx-10.14.0 -fcxx-exceptions -fexceptions -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_8ed8d.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/local/Cellar/cmake/3.14.2/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple x86_64-apple-macosx10.14.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fno-strict-return -masm-verbose -munwind-tables -target-sdk-version=10.14 -target-cpu penryn -dwarf-column-info -debugger-tuning=lldb -target-linker-version 450.3 -v -coverage-notes-file /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_147ef.dir/CMakeCXXCompilerABI.cpp.gcno -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/10.0.1 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -stdlib=libc++ -Wno-atomic-implicit-seq-cst -Wno-framework-include-private-from-public -Wno-atimport-in-framework-header -Wno-quoted-include-in-framework-header -fdeprecated-macro -fdebug-compilation-dir /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fobjc-runtime=macosx-10.14.0 -fcxx-exceptions -fexceptions -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_147ef.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/local/Cellar/cmake/3.14.2/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
   ignore line: [clang -cc1 version 10.0.1 (clang-1001.0.46.4) default target x86_64-apple-darwin18.7.0]
   ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/c++/v1"]
   ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/local/include"]
@@ -317,14 +333,14 @@ Parsed CXX implicit link information from above output:
   ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include]
   ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks (framework directory)]
   ignore line: [End of search list.]
-  ignore line: [Linking CXX executable cmTC_8ed8d]
-  ignore line: [/usr/local/Cellar/cmake/3.14.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8ed8d.dir/link.txt --verbose=1]
-  ignore line: [/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_8ed8d.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_8ed8d ]
+  ignore line: [Linking CXX executable cmTC_147ef]
+  ignore line: [/usr/local/Cellar/cmake/3.14.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_147ef.dir/link.txt --verbose=1]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_147ef.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_147ef ]
   ignore line: [Apple LLVM version 10.0.1 (clang-1001.0.46.4)]
   ignore line: [Target: x86_64-apple-darwin18.7.0]
   ignore line: [Thread model: posix]
   ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
-  link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.14.0 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -o cmTC_8ed8d -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_8ed8d.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/lib/darwin/libclang_rt.osx.a]
+  link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.14.0 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -o cmTC_147ef -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_147ef.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/lib/darwin/libclang_rt.osx.a]
     arg [/Library/Developer/CommandLineTools/usr/bin/ld] ==> ignore
     arg [-demangle] ==> ignore
     arg [-lto_library] ==> ignore, skip following value
@@ -337,11 +353,11 @@ Parsed CXX implicit link information from above output:
     arg [-syslibroot] ==> ignore
     arg [/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_8ed8d] ==> ignore
+    arg [cmTC_147ef] ==> ignore
     arg [-search_paths_first] ==> ignore
     arg [-headerpad_max_install_names] ==> ignore
     arg [-v] ==> ignore
-    arg [CMakeFiles/cmTC_8ed8d.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_147ef.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lc++] ==> lib [c++]
     arg [-lSystem] ==> lib [System]
     arg [/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/lib/darwin/libclang_rt.osx.a] ==> lib [/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/lib/darwin/libclang_rt.osx.a]
@@ -361,14 +377,16 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
 Change Dir: /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/local/bin/gmake cmTC_91749/fast 
-/usr/local/bin/gmake -f CMakeFiles/cmTC_91749.dir/build.make CMakeFiles/cmTC_91749.dir/build
+Run Build Command(s):/usr/local/bin/gmake cmTC_0ca50/fast 
 gmake[1]: Entering directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_91749.dir/feature_tests.cxx.o
-/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=c++1z -o CMakeFiles/cmTC_91749.dir/feature_tests.cxx.o -c /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_91749
-/usr/local/Cellar/cmake/3.14.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_91749.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_91749.dir/feature_tests.cxx.o  -o cmTC_91749 
+/usr/local/bin/gmake -f CMakeFiles/cmTC_0ca50.dir/build.make CMakeFiles/cmTC_0ca50.dir/build
+gmake[2]: Entering directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0ca50.dir/feature_tests.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=c++1z -o CMakeFiles/cmTC_0ca50.dir/feature_tests.cxx.o -c /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_0ca50
+/usr/local/Cellar/cmake/3.14.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0ca50.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_0ca50.dir/feature_tests.cxx.o  -o cmTC_0ca50 
+gmake[2]: Leaving directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
 gmake[1]: Leaving directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
 
 
@@ -434,14 +452,16 @@ gmake[1]: Leaving directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-b
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/local/bin/gmake cmTC_5c28d/fast 
-/usr/local/bin/gmake -f CMakeFiles/cmTC_5c28d.dir/build.make CMakeFiles/cmTC_5c28d.dir/build
+Run Build Command(s):/usr/local/bin/gmake cmTC_e0134/fast 
 gmake[1]: Entering directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_5c28d.dir/feature_tests.cxx.o
-/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=c++14 -o CMakeFiles/cmTC_5c28d.dir/feature_tests.cxx.o -c /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_5c28d
-/usr/local/Cellar/cmake/3.14.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5c28d.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_5c28d.dir/feature_tests.cxx.o  -o cmTC_5c28d 
+/usr/local/bin/gmake -f CMakeFiles/cmTC_e0134.dir/build.make CMakeFiles/cmTC_e0134.dir/build
+gmake[2]: Entering directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e0134.dir/feature_tests.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=c++14 -o CMakeFiles/cmTC_e0134.dir/feature_tests.cxx.o -c /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_e0134
+/usr/local/Cellar/cmake/3.14.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e0134.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_e0134.dir/feature_tests.cxx.o  -o cmTC_e0134 
+gmake[2]: Leaving directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
 gmake[1]: Leaving directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
 
 
@@ -507,14 +527,16 @@ gmake[1]: Leaving directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-b
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/local/bin/gmake cmTC_69b0d/fast 
-/usr/local/bin/gmake -f CMakeFiles/cmTC_69b0d.dir/build.make CMakeFiles/cmTC_69b0d.dir/build
+Run Build Command(s):/usr/local/bin/gmake cmTC_2ef9f/fast 
 gmake[1]: Entering directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_69b0d.dir/feature_tests.cxx.o
-/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=c++11 -o CMakeFiles/cmTC_69b0d.dir/feature_tests.cxx.o -c /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_69b0d
-/usr/local/Cellar/cmake/3.14.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_69b0d.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_69b0d.dir/feature_tests.cxx.o  -o cmTC_69b0d 
+/usr/local/bin/gmake -f CMakeFiles/cmTC_2ef9f.dir/build.make CMakeFiles/cmTC_2ef9f.dir/build
+gmake[2]: Entering directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_2ef9f.dir/feature_tests.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=c++11 -o CMakeFiles/cmTC_2ef9f.dir/feature_tests.cxx.o -c /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_2ef9f
+/usr/local/Cellar/cmake/3.14.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2ef9f.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_2ef9f.dir/feature_tests.cxx.o  -o cmTC_2ef9f 
+gmake[2]: Leaving directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
 gmake[1]: Leaving directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
 
 
@@ -580,14 +602,16 @@ gmake[1]: Leaving directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-b
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/local/bin/gmake cmTC_13717/fast 
-/usr/local/bin/gmake -f CMakeFiles/cmTC_13717.dir/build.make CMakeFiles/cmTC_13717.dir/build
+Run Build Command(s):/usr/local/bin/gmake cmTC_d2401/fast 
 gmake[1]: Entering directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_13717.dir/feature_tests.cxx.o
-/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=c++98 -o CMakeFiles/cmTC_13717.dir/feature_tests.cxx.o -c /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_13717
-/usr/local/Cellar/cmake/3.14.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_13717.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_13717.dir/feature_tests.cxx.o  -o cmTC_13717 
+/usr/local/bin/gmake -f CMakeFiles/cmTC_d2401.dir/build.make CMakeFiles/cmTC_d2401.dir/build
+gmake[2]: Entering directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_d2401.dir/feature_tests.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=c++98 -o CMakeFiles/cmTC_d2401.dir/feature_tests.cxx.o -c /Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_d2401
+/usr/local/Cellar/cmake/3.14.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d2401.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_d2401.dir/feature_tests.cxx.o  -o cmTC_d2401 
+gmake[2]: Leaving directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
 gmake[1]: Leaving directory '/Users/omaralmo/Desktop/courses/CSI4900/lw-crypto-benchmark-project/aes/CMakeFiles/CMakeTmp'
 
 

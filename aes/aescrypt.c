@@ -425,56 +425,6 @@ int encrypt_stream(FILE *infp, FILE *outfp, unsigned char *passwd, int passlen)
     return 0;
 }
 
-int readFile(char *fileName, char *out_msg)
-{
-    FILE *file = fopen(fileName, "r");
-    char *code;
-    size_t n = 0;
-    int c;
-
-    if (file == NULL)
-        return -1; // could not open file
-    fseek(file, 0, SEEK_END);
-    long f_size = ftell(file);
-    fseek(file, 0, SEEK_SET);
-    code = (char *)malloc(f_size + 1);
-
-    while ((c = fgetc(file)) != EOF)
-    {
-        code[n++] = (char)c;
-    }
-
-    code[n] = '\0';
-    strcpy(out_msg, code);
-    free(code);
-    fclose(file);
-    return 0;
-}
-
-int get_file_size(char *file_name)
-{
-
-    // opening the file in read mode
-    FILE *fp = fopen(file_name, "r");
-
-    // checking if the file exist or not
-    if (fp == NULL)
-    {
-        printf("%s File Not Found!\n", file_name);
-        return -1;
-    }
-
-    fseek(fp, 0L, SEEK_END);
-
-    // calculating the size of the file
-    int res = ftell(fp);
-
-    // closing the file
-    fclose(fp);
-
-    return res;
-}
-
 /*
  *  decrypt_stream
  *
@@ -1103,36 +1053,36 @@ int benchmark_one_file(char *file_name, unsigned char *key, int keylen,
 int main(int argc, char *argv[])
 {
     printf("==================================================================\n");
-    if (argc < 2 || argc > 7)
-    {
-        printf("Please provided the file to encrypt\n");
-        showUsage();
-        return -1;
-    };
+    // if (argc < 2 || argc > 7)
+    // {
+    //     printf("Please provided the file to encrypt\n");
+    //     showUsage();
+    //     return -1;
+    // };
 
-    unsigned char key[16] = "some_secret_key";
-    int keylen = 16;
-    FILE *infp = NULL;
-    FILE *outfp = NULL;
-    encryptmode_t mode = UNINIT;
-    char *infile = NULL;
-    int file_count = 0;
-    char outfile[1024];
+    // unsigned char key[16] = "some_secret_key";
+    // int keylen = 16;
+    // FILE *infp = NULL;
+    // FILE *outfp = NULL;
+    // encryptmode_t mode = UNINIT;
+    // char *infile = NULL;
+    // int file_count = 0;
+    // char outfile[1024];
 
-    int debug = strcmp(argv[argc - 1], "debug") == 0 ? 1 : 0;
-    int previous = get_file_size("run_time_bench_mark.csv");
-    FILE *benchmark_fp = fopen("run_time_bench_mark.csv", previous == -1 ? "wr" : "a");
+    // int debug = strcmp(argv[argc - 1], "debug") == 0 ? 1 : 0;
+    // int previous = get_file_size("run_time_bench_mark.csv");
+    // FILE *benchmark_fp = fopen("run_time_bench_mark.csv", previous == -1 ? "wr" : "a");
 
-    // int enc = encrypt_stream(infp, outfp, key, keylen);
-    // int dec = decrypt_stream(infp, outfp, key, keylen);
+    // // int enc = encrypt_stream(infp, outfp, key, keylen);
+    // // int dec = decrypt_stream(infp, outfp, key, keylen);
 
-    if (previous == -1)
-    {
-        fprintf(benchmark_fp, "file_name,file_sizes,encryption_time(s),decryption_time(s),total_time(s)\n");
-    }
-    int result = benchmark_one_file(argv[1], benchmark_fp, key, keylen, debug);
-    // file_name,run_time_fp,key, keylen
-    fclose(benchmark_fp);
+    // if (previous == -1)
+    // {
+    //     fprintf(benchmark_fp, "file_name,file_sizes,encryption_time(s),decryption_time(s),total_time(s)\n");
+    // }
+    // int result = benchmark_one_file(argv[1], benchmark_fp, key, keylen, debug);
+    // // file_name,run_time_fp,key, keylen
+    // fclose(benchmark_fp);
     printf("==================================================================\n");
 
     return 0;

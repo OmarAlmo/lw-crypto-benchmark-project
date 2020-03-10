@@ -22,4 +22,4 @@ set( COMMON_SOURCE_FILES
    password.c )
 
 add_executable( aescrypt aescrypt.c ${COMMON_SOURCE_FILES} )
-add_executable( aescrypt_keygen aescrypt_keygen.c ${COMMON_SOURCE_FILES} )
+# add_executable( aescrypt_keygen aescrypt_keygen.c ${COMMON_SOURCE_FILES} )
