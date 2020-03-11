@@ -453,7 +453,6 @@ int readFile(char *fileName, char *out_msg)
 
 int get_file_size(char *file_name)
 {
-
     // opening the file in read mode
     FILE *fp = fopen(file_name, "r");
 
@@ -468,7 +467,6 @@ int get_file_size(char *file_name)
 
     // calculating the size of the file
     int res = ftell(fp);
-
     // closing the file
     fclose(fp);
 
@@ -1008,79 +1006,35 @@ void showUsage()
 int benchmark_one_file(char *file_name, unsigned char *key, int keylen,
                        FILE *run_time_fp, int debug)
 {
+    double encryption_time = 0.0, decryption_time = 0.0;
+
     size_t length_of_file = get_file_size(file_name);
-
-    char *plain_text = malloc(length_of_file + 1);
-    readFile(file_name, plain_text);
-
-    // counting numbers of encryption needs to be done
-    int numbers_encrypted_rounds = length_of_file / MAX_MESSAGE_LENGTH + 1;
-
-    int begin_index = 0;
-    printf("%s contains %lu characters\n", file_name, length_of_file);
-    printf("for size %llu we are encrypting %d times\n", length_of_file,
-           numbers_encrypted_rounds);
-
-    unsigned char msg[MAX_MESSAGE_LENGTH];
-    int func_ret, ret_val = KAT_SUCCESS;
-    double encryption_time = 0.0, decryption_time = 0.0, percent_completion = 0.0;
-
     double total_d_time;
+    int func_ret;
     clock_t total_time = clock();
-    // batch the huge file into blocks to perform ace
-    for (begin_index = 0; begin_index < length_of_file;
-         begin_index += MAX_MESSAGE_LENGTH)
-    {
-        int end_index = (begin_index + MAX_MESSAGE_LENGTH);
-        end_index = end_index > length_of_file ? length_of_file : end_index;
 
-        strncpy(msg, plain_text + begin_index, end_index - begin_index);
+    FILE *inread = fopen(file_name, "r");
+    FILE *outread = fopen("something_idc", "w");
+    printf("key %s| len %d | strlen %d \n", key, keylen, strlen(key));
+    // encryption
+    clock_t t;
+    t = clock();
+    func_ret = encrypt_stream(inread, outread, key, keylen);
+    t = clock() - t;
+    encryption_time += ((double)t) / CLOCKS_PER_SEC; // in seconds
 
-        // encryption
-        clock_t t;
-        t = clock();
-        func_ret = encrypt_stream(file_name, run_time_fp, key, keylen);
-        t = clock() - t;
-        encryption_time += ((double)t) / CLOCKS_PER_SEC; // in seconds
+    fclose(inread), fclose(outread);
 
-        if (func_ret != KAT_SUCCESS)
-        {
-            printf("Encryption failed");
-        }
+    inread = fopen("something_idc", "r");
+    outread = fopen("some_random_decrypt", "w");
+    // decryption
+    t = clock();
+    func_ret = decrypt_stream(inread, outread, key, keylen);
+    t = clock() - t;
+    decryption_time += ((double)t) / CLOCKS_PER_SEC; // in seconds a
 
-        // decryption
-        t = clock();
-        func_ret = decrypt_stream(file_name, run_time_fp, key, keylen);
-        t = clock() - t;
-        decryption_time += ((double)t) / CLOCKS_PER_SEC; // in seconds a
+    fclose(inread), fclose(outread);
 
-        if (func_ret != KAT_SUCCESS)
-        {
-            printf("Decryption failed");
-        }
-
-        if (debug)
-        {
-            printf("============================================\n");
-            printf("Encryptingmsg starting from %d ends to %d\n", begin_index,
-                   end_index);
-            printf("Is the process success ? <%s>\n",
-                   ret_val == KAT_SUCCESS ? "true" : "false");
-            printf("Is the decryption success ? <%s>\n",
-                   ret_val == KAT_SUCCESS ? "true" : "false");
-            printf("============================================\n");
-        }
-
-        printf("[");
-        percent_completion = ((double)begin_index / length_of_file) * 100;
-        for (int x = 0; x < (int)percent_completion; x++)
-        {
-            printf("|");
-        }
-        printf("%.2f%%]\r", percent_completion);
-
-        fflush(stdout);
-    }
     total_time = clock() - total_time;
     total_d_time = ((double)total_time) / CLOCKS_PER_SEC;
     printf("\n");
@@ -1090,9 +1044,6 @@ int benchmark_one_file(char *file_name, unsigned char *key, int keylen,
             encryption_time, decryption_time, total_d_time);
     printf("It takes  %.2f s\n", total_d_time);
 
-    // fclose(enc_output_fp);
-    // fclose(dec_output_fp);
-    free(plain_text);
     return 0;
 }
 
@@ -1111,28 +1062,23 @@ int main(int argc, char *argv[])
     };
 
     unsigned char key[16] = "some_secret_key";
-    int keylen = 16;
-    FILE *infp = NULL;
-    FILE *outfp = NULL;
+    printf("key %s\n", key);
+
     encryptmode_t mode = UNINIT;
-    char *infile = NULL;
-    int file_count = 0;
-    char outfile[1024];
 
     int debug = strcmp(argv[argc - 1], "debug") == 0 ? 1 : 0;
     int previous = get_file_size("run_time_bench_mark.csv");
     FILE *benchmark_fp = fopen("run_time_bench_mark.csv", previous == -1 ? "wr" : "a");
 
-    // int enc = encrypt_stream(infp, outfp, key, keylen);
-    // int dec = decrypt_stream(infp, outfp, key, keylen);
-
     if (previous == -1)
     {
         fprintf(benchmark_fp, "file_name,file_sizes,encryption_time(s),decryption_time(s),total_time(s)\n");
     }
-    int result = benchmark_one_file(argv[1], benchmark_fp, key, keylen, debug);
+    int result = benchmark_one_file(argv[1], key, 16, benchmark_fp, debug);
+
     // file_name,run_time_fp,key, keylen
     fclose(benchmark_fp);
+
     printf("==================================================================\n");
 
     return 0;
