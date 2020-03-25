@@ -145,7 +145,7 @@ int benchmark_one_file(char *file_name, unsigned char *key,
     // output current bench mark result to the csv file
     // fprintf(run_time_fp, "%s,%d,%f,%f,%f\n", file_name, length_of_file,
     //         encryption_time, decryption_time, total_d_time);
-    printf("It takes  %.2f s\n", total_d_time);
+    printf("It takes  %.5f s\n", total_d_time);
 
     // fclose(enc_output_fp);
     // fclose(dec_output_fp);
