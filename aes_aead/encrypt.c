@@ -143,13 +143,16 @@ int crypto_aead_encrypt(
    uint8_t *w = malloc(w_size + 1);
 
    aes_key_expansion((uint8_t *)k, w);
+   uint8_t *plain_text = malloc(sizeof(m) + 1);
 
-   uint8_t *plain_text = (uint8_t *)m;
-   uint8_t *cipher;
+   plain_text = (uint8_t *)m;
+   uint8_t *cipher = malloc(16);
+
    aes_cipher(plain_text, cipher, w);
 
    uint8_t mac[HMAC_SHA256_BYTES];
    hmac_sha256(mac, k, 256, m, 0);
+   c = malloc(sizeof(cipher) + 1);
 
    c = (char *)cipher;
    clen = strlen(c);

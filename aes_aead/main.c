@@ -79,11 +79,11 @@ int benchmark_one_file(char *file_name, unsigned char *key,
     encryption_time += ((double)t) / CLOCKS_PER_SEC; // in seconds
 
     // decryption
-    t = clock();
-    func_ret = crypto_aead_decrypt(msg2, &mlen2, NULL, ct, clen, ad, adlen,
-                                   nonce, key);
-    t = clock() - t;
-    decryption_time += ((double)t) / CLOCKS_PER_SEC; // in seconds a
+    // t = clock();
+    // func_ret = crypto_aead_decrypt(msg2, &mlen2, NULL, ct, clen, ad, adlen,
+    //                                nonce, key);
+    // t = clock() - t;
+    // decryption_time += ((double)t) / CLOCKS_PER_SEC; // in seconds a
 
     if (mlen != mlen2)
     {
