@@ -31,8 +31,8 @@ void showUsage()
 }
 
 int benchmark_one_file(char *file_name, unsigned char *key,
-                       unsigned char *nonce, unsigned char *ad, FILE *run_time_fp,
-                       int debug)
+                       unsigned char *nonce, unsigned char *ad,
+                       FILE *run_time_fp, int debug)
 {
     size_t length_of_file = get_file_size(file_name);
 
@@ -40,7 +40,7 @@ int benchmark_one_file(char *file_name, unsigned char *key,
     readFile(file_name, plain_text);
 
     // counting numbers of encryption needs to be done
-    int numbers_encrypted_rounds = 100;
+    int numbers_encrypted_rounds = length_of_file / MAX_MESSAGE_LENGTH + 1;
 
     int begin_index = 0;
     printf("%s contains %lu characters\n", file_name, length_of_file);
@@ -58,6 +58,14 @@ int benchmark_one_file(char *file_name, unsigned char *key,
 
     // runtime benchmark in terms enc and dec
     double encryption_time = 0.0, decryption_time = 0.0, percent_completion = 0.0;
+
+    // defining the output file name in format name.enc and name.dec
+    char copy_file_name[strlen(file_name) + 5];
+    strcpy(copy_file_name, file_name);
+    FILE *enc_output_fp = fopen(strcat(copy_file_name, ".enc"), "wr");
+
+    strcpy(copy_file_name, file_name);
+    FILE *dec_output_fp = fopen(strcat(copy_file_name, ".dec"), "wr");
 
     double total_d_time;
     clock_t total_time = clock();
@@ -125,17 +133,19 @@ int benchmark_one_file(char *file_name, unsigned char *key,
     total_d_time = ((double)total_time) / CLOCKS_PER_SEC;
     printf("\n");
     // output current bench mark result to the csv file
-    fprintf(run_time_fp, "%s,%d,%f,%f,%f\n", file_name, length_of_file,
-            encryption_time, decryption_time, total_d_time);
+    fprintf(run_time_fp, "%s,%d,%f,%f,%f,%d\n", file_name, length_of_file,
+            encryption_time, decryption_time, total_d_time,numbers_encrypted_rounds);
     printf("It takes  %.2f s\n", total_d_time);
 
+    // fclose(enc_output_fp);
+    // fclose(dec_output_fp);
     free(plain_text);
     return 0;
 }
 
 int main(int argc, char **argv)
 {
-
+    system("clear");
     printf("==================================================================\n");
     if (argc < 2 || argc > 7)
     {
@@ -148,8 +158,8 @@ int main(int argc, char **argv)
     unsigned char nonce[CRYPTO_NPUBBYTES] = "some_nonce";
     unsigned char ad[MAX_ASSOCIATED_DATA_LENGTH] = "some_ad";
     int debug = strcmp(argv[argc - 1], "debug") == 0 ? 1 : 0;
-    int previous = get_file_size("run_time_bench_mark.csv");
-    FILE *benchmark_fp = fopen("run_time_bench_mark.csv", previous == -1 ? "wr" : "a");
+    int previous = get_file_size("pj_run_time_bench_mark.csv");
+    FILE *benchmark_fp = fopen("pj_run_time_bench_mark.csv", previous == -1 ? "wr" : "a");
 
     switch (argc)
     {
@@ -178,7 +188,7 @@ int main(int argc, char **argv)
 
     if (previous == -1)
     {
-        fprintf(benchmark_fp, "file_name,file_sizes,encryption_time(s),decryption_time(s),total_time(s)\n");
+        fprintf(benchmark_fp, "file_name,file_sizes,encryption_time(s),decryption_time(s),total_time(s),numbers_encrypted_rounds\n");
     }
     int result = benchmark_one_file(argv[1], key, nonce, ad, benchmark_fp, debug);
 

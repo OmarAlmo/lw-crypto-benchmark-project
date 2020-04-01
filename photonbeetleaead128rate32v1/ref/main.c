@@ -24,15 +24,15 @@
 void showUsage()
 {
     printf(
-        " ./photon [file_name to encrypt] options\n"
+        " ./ace128 [file_name to encrypt] options\n"
         "\t--key=SOMECAHRATER\n"
         "\t--nonce=SOMECAHRATER\n"
         "\t--associate-data=SOMECAHRATER\n");
 }
 
 int benchmark_one_file(char *file_name, unsigned char *key,
-                       unsigned char *nonce, unsigned char *ad, FILE *run_time_fp,
-                       int debug)
+                       unsigned char *nonce, unsigned char *ad,
+                       FILE *run_time_fp, int debug)
 {
     size_t length_of_file = get_file_size(file_name);
 
@@ -59,11 +59,19 @@ int benchmark_one_file(char *file_name, unsigned char *key,
     // runtime benchmark in terms enc and dec
     double encryption_time = 0.0, decryption_time = 0.0, percent_completion = 0.0;
 
+    // defining the output file name in format name.enc and name.dec
+    char copy_file_name[strlen(file_name) + 5];
+    strcpy(copy_file_name, file_name);
+    FILE *enc_output_fp = fopen(strcat(copy_file_name, ".enc"), "wr");
+
+    strcpy(copy_file_name, file_name);
+    FILE *dec_output_fp = fopen(strcat(copy_file_name, ".dec"), "wr");
+
     double total_d_time;
     clock_t total_time = clock();
     // batch the huge file into blocks to perform ace
-    for (begin_index = 0; begin_index < numbers_encrypted_rounds;
-         begin_index += 1)
+    for (begin_index = 0; begin_index < length_of_file;
+         begin_index += MAX_MESSAGE_LENGTH)
     {
         int end_index = (begin_index + MAX_MESSAGE_LENGTH);
         end_index = end_index > length_of_file ? length_of_file : end_index;
@@ -126,16 +134,18 @@ int benchmark_one_file(char *file_name, unsigned char *key,
     printf("\n");
     // output current bench mark result to the csv file
     fprintf(run_time_fp, "%s,%d,%f,%f,%f,%d\n", file_name, length_of_file,
-            encryption_time, decryption_time, total_d_time, numbers_encrypted_rounds);
+            encryption_time, decryption_time, total_d_time,numbers_encrypted_rounds);
     printf("It takes  %.2f s\n", total_d_time);
 
+    // fclose(enc_output_fp);
+    // fclose(dec_output_fp);
     free(plain_text);
     return 0;
 }
 
 int main(int argc, char **argv)
 {
-
+    system("clear");
     printf("==================================================================\n");
     if (argc < 2 || argc > 7)
     {
@@ -148,8 +158,8 @@ int main(int argc, char **argv)
     unsigned char nonce[CRYPTO_NPUBBYTES] = "some_nonce";
     unsigned char ad[MAX_ASSOCIATED_DATA_LENGTH] = "some_ad";
     int debug = strcmp(argv[argc - 1], "debug") == 0 ? 1 : 0;
-    int previous = get_file_size("photon_run_time_bench_mark.csv");
-    FILE *benchmark_fp = fopen("photon_run_time_bench_mark.csv", previous == -1 ? "wr" : "a");
+    int previous = get_file_size("photon-beetle_run_time_bench_mark.csv");
+    FILE *benchmark_fp = fopen("photon-beetle_run_time_bench_mark.csv", previous == -1 ? "wr" : "a");
 
     switch (argc)
     {

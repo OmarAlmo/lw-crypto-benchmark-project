@@ -8,11 +8,6 @@ pyjamask: pyjamask
 pyjamask: main.c encrypt.c pyjamask.c
 	$(CC) $(NISTGCCFLAGS) -o $@ $^ $(LFLAGS)
 
-
-# acetestvec: genkat_aead.c encrypt.c ace.c
-# 	$(CC) $(NISTGCCFLAGS) -o $@ $^ $(LFLAGS)
-
-
 .PHONY: clean
 
 clean:

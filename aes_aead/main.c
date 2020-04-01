@@ -31,7 +31,7 @@ void showUsage()
 }
 
 int benchmark_one_file(char *file_name, unsigned char *key,
-                       unsigned char *nonce, unsigned char *ad,
+                       unsigned char *nonce, unsigned char *ad,FILE *run_time_fp,
                        int debug)
 {
   size_t length_of_file = get_file_size(file_name);
@@ -79,11 +79,11 @@ int benchmark_one_file(char *file_name, unsigned char *key,
     encryption_time += ((double)t) / CLOCKS_PER_SEC; // in seconds
 
     // decryption
-    // t = clock();
-    // func_ret = crypto_aead_decrypt(msg2, &mlen2, NULL, ct, clen, ad, adlen,
-    //                                nonce, key);
-    // t = clock() - t;
-    // decryption_time += ((double)t) / CLOCKS_PER_SEC; // in seconds a
+    t = clock();
+    func_ret = crypto_aead_decrypt(msg2, &mlen2, NULL, ct, clen, ad, adlen,
+                                   nonce, key);
+    t = clock() - t;
+    decryption_time += ((double)t) / CLOCKS_PER_SEC; // in seconds a
 
     if (mlen != mlen2)
     {
@@ -125,8 +125,8 @@ int benchmark_one_file(char *file_name, unsigned char *key,
   total_d_time = ((double)total_time) / CLOCKS_PER_SEC;
   printf("\n");
   // output current bench mark result to the csv file
-  // fprintf(run_time_fp, "%s,%d,%f,%f,%f\n", file_name, length_of_file,
-  //         encryption_time, decryption_time, total_d_time);
+  fprintf(run_time_fp, "%s,%d,%f,%f,%f\n", file_name, length_of_file,
+          encryption_time, decryption_time, total_d_time,numbers_encrypted_rounds);
   printf("It takes  %.5f s\n", total_d_time);
 
   // fclose(enc_output_fp);
@@ -151,7 +151,7 @@ int main(int argc, char **argv)
   unsigned char ad[MAX_ASSOCIATED_DATA_LENGTH] = "some_ad";
   int debug = strcmp(argv[argc - 1], "debug") == 0 ? 1 : 0;
   int previous = get_file_size("run_time_bench_mark.csv");
-  // FILE *benchmark_fp = fopen("run_time_bench_mark.csv", previous == -1 ? "wr" : "a");
+  FILE *benchmark_fp = fopen("run_time_bench_mark.csv", previous == -1 ? "wr" : "a");
 
   switch (argc)
   {
@@ -178,13 +178,13 @@ int main(int argc, char **argv)
     break;
   }
 
-  // if (previous == -1)
-  // {
-  //     fprintf(benchmark_fp, "file_name,file_sizes,encryption_time(s),decryption_time(s),total_time(s)\n");
-  // }
-  int result = benchmark_one_file(argv[1], key, nonce, ad, debug);
+  if (previous == -1)
+  {
+      fprintf(benchmark_fp, "file_name,file_sizes,encryption_time(s),decryption_time(s),total_time(s),numbers_encrypted_rounds\n");
+  }
+  int result = benchmark_one_file(argv[1], key, nonce, ad,benchmark_fp, debug);
 
-  // fclose(benchmark_fp);
+  fclose(benchmark_fp);
   printf("==================================================================\n");
   return 0;
 }

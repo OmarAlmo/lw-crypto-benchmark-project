@@ -1,0 +1,7 @@
+file_name,file_sizes,encryption_time(s),decryption_time(s),total_time(s),numbers_encrypted_rounds
+/Users/omaralmo/Desktop/courses/CSI4900/kb_data/128kb.txt,128000,0.157396,0.129944,0.339866
+/Users/omaralmo/Desktop/courses/CSI4900/kb_data/16kb.txt,16000,0.021027,0.017186,0.045007
+/Users/omaralmo/Desktop/courses/CSI4900/kb_data/16mb.txt,16384000,21.290938,17.526325,45.691961
+/Users/omaralmo/Desktop/courses/CSI4900/kb_data/1mb.txt,1024000,1.283683,1.053090,2.757578
+/Users/omaralmo/Desktop/courses/CSI4900/kb_data/256kb.txt,256000,0.326157,0.266752,0.701840
+/Users/omaralmo/Desktop/courses/CSI4900/kb_data/32kb.txt,32000,0.042032,0.034327,0.090483

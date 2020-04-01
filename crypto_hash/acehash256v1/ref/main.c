@@ -30,7 +30,7 @@ int benchmark_one_file(char *file_name, FILE *run_time_fp)
     unsigned char digest[CRYPTO_BYTES];
     unsigned char msg[MAX_MESSAGE_LENGTH];
 
-    unsigned long long mlen;
+    unsigned long long mlen = MAX_MESSAGE_LENGTH;
 
     char *plain_text = malloc(length_of_file + 1);
     readFile(file_name, plain_text);
@@ -61,7 +61,7 @@ int benchmark_one_file(char *file_name, FILE *run_time_fp)
 
         strncpy(msg, plain_text + begin_index, end_index - begin_index);
 
-        mlen = strlen(msg);
+        // mlen = strlen(msg);
 
         // encryption
         clock_t t;
@@ -100,8 +100,8 @@ int benchmark_one_file(char *file_name, FILE *run_time_fp)
     printf("\n");
 
     // output current bench mark result to the csv file
-    fprintf(run_time_fp, "%s,%d,%f,%f\n", file_name, length_of_file,
-            hash_time, total_d_time);
+    fprintf(run_time_fp, "%s,%d,%f,%f,%d\n", file_name, length_of_file,
+            hash_time, total_d_time, numbers_encrypted_rounds);
     printf("It takes  %.2f s\n", total_d_time);
 
     fclose(hash_output_fp);
@@ -118,8 +118,8 @@ int main(int argc, char **argv)
         printf("Invalid Argument Size, please provide a file to encrypt");
         return -1;
     }
-    int previous = get_file_size("run_time_bench_mark.csv");
-    FILE *benchmark_fp = fopen("run_time_bench_mark.csv", previous == -1 ? "wr" : "a");
+    int previous = get_file_size("acehash_run_time_bench_mark.csv");
+    FILE *benchmark_fp = fopen("acehash_run_time_bench_mark.csv", previous == -1 ? "wr" : "a");
     if (previous == -1)
     {
         fprintf(benchmark_fp, "file_name,file_sizes,hashtime(s),total_time(s)\n");
