@@ -13,8 +13,8 @@ int main(int argc, char **argv)
 {
     int previous = get_file_size("photon_run_time_bench_mark.csv");
     FILE *benchmark_fp = fopen("photon_run_time_bench_mark.csv", previous == -1 ? "wr" : "a");
-    
     int FILE_SIZE  = 0;
+
     char *n = argv[1];
     int num = atoi(n);
     int iterations = num * 4096;
@@ -38,7 +38,8 @@ int main(int argc, char **argv)
     double encryption_time = 0.0, decryption_time = 0.0, percent_completion = 0.0, final_time = 0.0;
     clock_t time;
     printf("herre");
-    for (int roundj = 0; roundj < iterations; roundj++){
+    for (int round = 0; round <= iterations; round+=4096){
+        printf("round: %d\n", round);
         for (i = 0; i < 16; i++) key[i] = 0;
         for (i = 0; i < 16; i++) iv[i] = 0;
         key[0] = 1;
