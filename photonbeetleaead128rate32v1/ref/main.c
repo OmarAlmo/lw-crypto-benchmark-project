@@ -8,6 +8,7 @@
 #include "util.h"
 #include <time.h>
 
+// # define MESSAGE_LEN = 3076;
 
 int main(int argc, char **argv)
 {
@@ -22,30 +23,30 @@ int main(int argc, char **argv)
     unsigned char t,state[500];
     unsigned long long s[500];
     int i,j ;
-    unsigned char plaintext[4096];
-    unsigned char ad[4096];
-    unsigned char ciphertext[4096];
+    unsigned long long  msglen, adlen, clen;    // msg, adlen, clen in bytes.
+    msglen = 3076;
+    adlen = 128;
+    unsigned char plaintext[msglen];
+    unsigned char ad[adlen];
+    unsigned char ciphertext[msglen+32];
     unsigned char key[16];
     unsigned char iv[16];
     unsigned char mac[16];
-    unsigned long long  msglen, adlen, clen;    // msg, adlen, clen in bytes.
     unsigned char maclen = 16;
     unsigned int  success;
 
-    msglen = 1003;
-    adlen = 1003;
 
     double encryption_time = 0.0, decryption_time = 0.0, percent_completion = 0.0, final_time = 0.0;
     clock_t time;
-    printf("herre");
-    for (int round = 0; round <= iterations; round+=4096){
+
+    for (int round = 0; round <= iterations; round+=3076){
         printf("round: %d\n", round);
         for (i = 0; i < 16; i++) key[i] = 0;
         for (i = 0; i < 16; i++) iv[i] = 0;
         key[0] = 1;
-        for (i = 0; i < 4096; i++) plaintext[i]  = i%256;
-        for (i = 0; i < 4096; i++) ciphertext[i] = 0;
-        for (i = 0; i < 4096; i++) ad[i] = i%7;
+        for (i = 0; i < msglen; i++) plaintext[i]  = i%256;
+        for (i = 0; i < msglen; i++) ciphertext[i] = 0;
+        for (i = 0; i < adlen; i++) ad[i] = i%7;
 
         // printf("\nPLAINTEXT::");
         // for( i = 0; i < msglen; i++) printf("%2x", plaintext[i]);
@@ -70,7 +71,7 @@ int main(int argc, char **argv)
         // printf("\nPLAINTEXT::");
         // for( i = 0; i < msglen; i++) printf("%2x", plaintext[i]);
 
-        FILE_SIZE += 4196;
+        FILE_SIZE += 3076;
     }
     final_time = encryption_time + decryption_time;
     fprintf(benchmark_fp, "%d,%f,%f,%f\n", FILE_SIZE,encryption_time, decryption_time, final_time);
